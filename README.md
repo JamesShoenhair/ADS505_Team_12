@@ -54,7 +54,7 @@ git clone https://github.com/JamesShoenhair/ADS505_Team_12.git
 cd ADS505_Team_12
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install numpy pandas matplotlib seaborn scikit-learn scipy jupyter
 ```
 
 ## How to Run
