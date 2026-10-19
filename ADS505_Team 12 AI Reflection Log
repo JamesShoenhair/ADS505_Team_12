@@ -1,0 +1,44 @@
+
+ADS-505 AI Reflection Log
+Team 12: Jordyn Gonzales, Dana Neuman, and James Shoenhair
+Project: October 19, 2026
+
+Opting out: If you did not use AI, check this box, provide your name/assignment above, and submit this document.
+[   ] I chose not to use AI tools for this assignment.
+
+# Part 1: Evaluation of AI Suggestions
+### Document concrete examples of how you interacted with the AI during your coding and data analysis process. You must include examples of suggestions you accepted, rejected, and reworked.
+
+## Overview: Generative AI was used as a supportive tool throughout this project. We used it to debug coding errors, improve data visualizations, and communicate findings with stakeholders. AI suggestions were reviewed and tested to ensure the code was accurate, functioned properly, and aligned with the project’s objectives. 
+
+## Prompt: Our IMF data has one row per country and indicator, with years as columns. How should we restructure it so we can compare countries across several indicators in the same year? 
+
+### Accepted: Reshaping our dataset from long to wide. By doing this we were able to gain more from our analysis and compare countries to each other on multiple indicators at once. If we didn’t reshape the dataset we would focus more on time-series plots.
+
+## Prompt: How can we stop clearly unstable countries like Libya and South Sudan from ranking at the top? 
+
+### Reworked: Engineering features so the model would penalize risky countries. We reworked this into a separate step applied after the model ranks countries: a political risk, sanctions, and market-size check. Forcing business preferences into the model would have made it worse at predicting growth, while a separate check keeps the model honest and lets decision-makers adjust the rules. 
+
+## Prompt: What feature engineering could improve the model beyond our current features?
+
+### Rejected: Two-year average growth feature and a moderate-inflation (0–5%) flag. We tested both, and validation performance got worse, so we removed them and kept the original feature set.  
+
+## Prompt: I extended the shrinkage for the linear discriminant analysis and it now shows a max depth of 2 and ROC_AUC score of 0.6 which beats performance at a max depth of 3. Is it worth keeping both max depth of 2 and max depth of 3 in the model for comparison?
+	
+### Suggestion: Yes, keep max depth 3 in the model table for comparison. First, it is evidence of your conclusion that simpler trees work better and that the benefit is leveling off. Second, removing max depth 3 your model would immediately jump from 2 to 5 and make the trend harder to see. 
+	
+### Accepted: The suggestion was accepted as a check on the benefits of removing a max depth of 3 which performed worse than max depth 2 to shorten the table and overall notebook versus the benefits of keeping it in for comparison and clarity in trends from results. 
+
+## Prompt: I am receiving an error message “unexpected keyword argument ‘shrinkage’” in my forecast using LDA instead of a logistic regression model. Please help me identify why I am receiving this error. 
+	
+### Suggestion: The error occurred because this cell still builds on a logistic regression model, but final_params now holds LDA’s settings. Swapping in LDA solves this problem. 
+forecast_pipe = make_pipeline(LinearDiscriminantAnalysis(solver='lsqr', **final_params))
+	
+### Accepted: Suggestion was accepted to swap the model command and max_iter = 1000 for solver=’lsqr’ to adjust the forecast model to build from the LDA modeling previously completed rather than the logistic regression. This suggestion was adopted after the LDA performance was improved and became the selected final model over logistic regression. 
+
+# Part 2: AI Risk Assessment
+
+## Identify any real risks you encountered while using AI for this assignment (e.g., hallucinated code, biased suggestions, data sensitivity regarding the final project dataset, or license concerns). Explain what you did to mitigate each risk.
+
+   Some risks we ran into were incorrect hallucinated code, resulting in misleading outputs, visualizations, and misinterpretation of initial findings. To mitigate these risks, each person reviewed, tested AI-generated code, verified outputs against our analysis, and evaluated whether our visualizations and conclusions accurately represented the data. Additionally, the team worked together to review the code for errors and parameters that either did not work or could be improved to improve model performance.This ensured that our team maintained responsibility for the final analysis and recommendations.
+   Due to working with a publicly available dataset from the International Monetary Fund (IMF), there were no concerns regarding protecting the confidentiality of the dataset or licensing it from the IMF. One concern we did run into AI assisting in developing statistical  and forecasting models but not calling out the limitations of the dataset. To mitigate this concern, our team reviewed the overall final analysis multiple times to ensure that we could speak to the limitations in forecasting due to limitations in the data for recommendations and next steps. 
