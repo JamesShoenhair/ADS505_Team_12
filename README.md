@@ -99,7 +99,14 @@ See the Model Brief and Discussion sections of the notebook for limitations and 
 
 ## AI Assistance Disclosure
 
-*[To be completed: tools used, which parts of the project they supported, and how outputs were reviewed and corrected. See the AI reflection log in the notebook.]*
+### Tools Used: 
+- Claude
+- ChatGPT
+
+- AI tools supported developing statistical models baseline, logistic regression, and linear discriminant analysis. 
+- AI tools supported developing and editing time series analysis of future years (2026-2028). 
+
+- To review prompts, suggessted outputs, and how those outputs were reviewed and corrected, please see the AI reflection log in the notebook.
 
 ## References
 
