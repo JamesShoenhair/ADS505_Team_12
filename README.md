@@ -1,3 +1,4 @@
+<img width="1088" height="581" alt="Screenshot 2026-10-19 at 6 16 11 AM" src="https://github.com/user-attachments/assets/52db144c-10ff-40ab-aea4-2738fc5922c4" />
 # Screening and Ranking Emerging Markets for M&A Using Macroeconomic Indicators
 
 **ADS-505: Applied Data Science for Business | University of San Diego | Team 12**
@@ -79,8 +80,8 @@ The notebook reads `ads505final.csv` from the same folder and runs end-to-end in
 |---|---|---|
 | Baseline (current growth) | 0.564 | 0.715 |
 | Logistic regression (final) | 0.626 | 0.669 |
-| LDA | 0.624 | n/a |
-| Random forest | 0.593 | n/a |
+| LDA | 0.628 | n/a |
+| Random forest | 0.595 | n/a |
 
 - All three models beat the baseline on validation, but the baseline beat the final model on the held-out test year. Current growth carried most of the predictive signal.
 - Lower GDP per capita was the strongest predictor of future top growth (economic convergence), so the model's top ranks favor low-income and fragile economies that an acquirer would likely screen out on risk.
