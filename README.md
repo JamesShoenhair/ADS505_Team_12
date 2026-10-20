@@ -1,4 +1,3 @@
-<img width="1088" height="581" alt="Screenshot 2026-10-19 at 6 16 11 AM" src="https://github.com/user-attachments/assets/52db144c-10ff-40ab-aea4-2738fc5922c4" />
 # Screening and Ranking Emerging Markets for M&A Using Macroeconomic Indicators
 
 **ADS-505: Applied Data Science for Business | University of San Diego | Team 12**
@@ -78,13 +77,13 @@ The notebook loads `ADS505_IMF_rawdata.csv` directly from this GitHub repository
 | Model | Validation ROC-AUC (2021) | Test ROC-AUC (2022) |
 |---|---|---|
 | Baseline (current growth) | 0.564 | 0.715 |
-| Logistic regression (final) | 0.626 | 0.669 |
-| LDA | 0.628 | n/a |
+| Logistic regression | 0.626 | n/a |
+| LDA (final) | 0.628 | 0.670 |
 | Random forest | 0.595 | n/a |
 
 - All three models beat the baseline on validation, but the baseline beat the final model on the held-out test year. Current growth carried most of the predictive signal.
 - Lower GDP per capita was the strongest predictor of future top growth (economic convergence), so the model's top ranks favor low-income and fragile economies that an acquirer would likely screen out on risk.
-- The model's 2026–2028 ranking moderately agrees with an IMF-projection ranking (Spearman = 0.59). Guinea and Uganda appear in both top-10 lists.
+- The model's 2026–2028 ranking moderately agrees with an IMF-projection ranking (Spearman = 0.58). Guinea and Uganda appear in both top-10 lists.
 
 See the Model Brief and Discussion sections of the notebook for limitations and recommended next steps.
 
@@ -101,11 +100,11 @@ See the Model Brief and Discussion sections of the notebook for limitations and 
 ### Tools Used: 
 - Claude
 - ChatGPT
+- Gemeni
 
-- AI tools supported developing statistical models baseline, logistic regression, and linear discriminant analysis. 
-- AI tools supported developing and editing time series analysis of future years (2026-2028). 
-
-- To review prompts, suggessted outputs, and how those outputs were reviewed and corrected, please see the AI reflection log in the notebook.
+- AI tools supported developing the statistical models: baseline, logistic regression, and linear discriminant analysis.
+- AI tools supported building and editing the 2026–2028 forecast ranking.
+- To review prompts, suggested outputs, and how those outputs were reviewed and corrected, see the AI Reflection Log file in this repository.
 
 ## References
 
