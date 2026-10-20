@@ -23,16 +23,15 @@ The screen answers the first question in an M&A search, *where to look*. Industr
 ```
 ADS505_Team_12/
 ├── README.md                       # Project overview, setup, and run instructions
-├── requirements.txt                # Python package dependencies
 ├── ads505final.csv                 # IMF WEO extract used by the notebook
-└── ADS505_Final_Project.ipynb      # Technical notebook (full analysis)
+└── ADS505_Final_Project_final.ipynb   # Technical notebook (full analysis)
 ```
 
 ## Data
 
 **Source:** International Monetary Fund. (2026). *World Economic Outlook database: April 2026 edition* [Data set]. https://www.imf.org/en/Publications/WEO/weo-database/2026/April
 
-**File:** `ads505final.csv`, 1,288 rows x 22 columns, an extract of the WEO database covering 200 countries and aggregates, seven indicators, and annual values for 2017–2031. Values for 2017–2025 are actuals or IMF estimates; 2026–2031 are IMF projections.
+**File:** `ADS505_IMF_rawdata.csv`, 1,288 rows x 22 columns, an extract of the WEO database covering 200 countries and aggregates, seven indicators, and annual values for 2017–2031. Values for 2017–2025 are actuals or IMF estimates; 2026–2031 are IMF projections.
 
 | Indicator | Notebook name |
 |---|---|
@@ -61,10 +60,10 @@ pip install numpy pandas matplotlib seaborn scikit-learn scipy jupyter
 ## How to Run
 
 1. Launch Jupyter from the repository folder: `jupyter notebook`
-2. Open `ADS505_Final_Project.ipynb`.
+2. Open `ADS505_Final_Project_Final.ipynb`.
 3. Select **Kernel > Restart & Run All**.
 
-The notebook reads `ads505final.csv` from the same folder and runs end-to-end in under a minute on a standard laptop. A fixed random seed (`SEED = 1`) makes results reproducible.
+The notebook loads `ADS505_IMF_rawdata.csv` directly from this GitHub repository, so an internet connection is required. It runs end-to-end in a few minutes on a standard laptop, and a fixed random seed (`SEED = 1`) makes results reproducible.
 
 ## Method Summary
 
