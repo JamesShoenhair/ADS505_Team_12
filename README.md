@@ -22,7 +22,7 @@ The screen answers the first question in an M&A search, *where to look*. Industr
 ```
 ADS505_Team_12/
 ├── README.md                       # Project overview, setup, and run instructions
-├── ads505final.csv                 # IMF WEO extract used by the notebook
+├── ADS505_IMF_rawdata.csv                # IMF WEO extract used by the notebook
 └── ADS505_Final_Project_final.ipynb   # Technical notebook (full analysis)
 ```
 
