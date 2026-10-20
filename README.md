@@ -93,9 +93,9 @@ See the Model Brief and Discussion sections of the notebook for limitations and 
 
 | Member | Contributions |
 |---|---|
-| Dana Neuman | *[to be completed]* |
-| Jordyn Gonzales | *[to be completed]* |
-| James Shoenhair | *[to be completed]* |
+| Dana Neuman | *Predictive Models, Forecast Models, Initial final model selection and final recommendations/results, initial business model draft, initial README draft, contributing to AI reflection log and designing final project slides/speaking to 2 slides* |
+| Jordyn Gonzales | *All of EDA and Pre-Processing, contributing to AI Reflection Log, finalizing business Brief EDA/Pre-processing section, 2 presentation slides* |
+| James Shoenhair | *Predictive Models (extending LDA), editing forecast model and final model selection to LDA after updated shrinkage results, editing notebook for any errors/ updating final results and recommendations with our finalized data, editing business brief with our updated data and model selection/recommendations, contributing to AI reflection log Updating/finalizing README file and ensuring no issues with our Github repository settings, 2 presentation slides* |
 
 ## AI Assistance Disclosure
 
